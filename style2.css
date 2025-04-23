@@ -839,7 +839,7 @@ input:focus {
 
       /* ===================================================== PROGRAMMING Language ======================================================== */
       .skill {
-        max-width: 100px;
+        max-width: 72px;
         width: 100%;
         height: 100px;
         padding: 1rem;
