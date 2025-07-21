@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JacksonWebDev</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="jacksonJersey.jpg" href="jacksonJersey.jpg">
+  <link rel="stylesheet" href="style.css" />
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-left-a">
+      <div class="nav-left">JacksonWebDev</div>
+    </a>
+
+    <div class="nav-toggle" id="navToggle">
+      <!-- Hamburger Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="menu-svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+    </svg>
+
+    </div>
+
+    <div class="nav-center" id="navLinks">
+      <a href="index.html" class="top">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="service.html">Services</a>
+      <a href="Project.html">Project</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+
+    <div class="nav-right" id="navRight">
+      <a href="contact.html" class="btn-nav">Hire Me</a>
+    </div>
+  </nav>
+
+
+
+        <!-- =================================== END OF NAV ===================================== -->
+
+
+
+
+        <!-- ============================================= ABOUT CONTAINER ================================================== -->
+    <section class="about-section">
+
+        <div class="about-text">
+            
+            <h2>About <button class="blog-btn">My Personal Blog</button></h2>
+             <p>
+                I build high-performing, scalable web applications that deliver sleek user experiences and solve real-world problems. My work is driven by a passion for innovation, clean code, and results that drive business growth.
+            </p>
+            <p>
+                I'm <span>Marvelous Oladapo</span>, an 18-year-old Nigerian software developer with over 4 years of hands-on experience in modern web development and frontend engineering. I specialize in crafting full-stack web applications using industry-leading tools and frameworks.
+            </p>
+            <p>
+                Over the years, I’ve helped startups, founders, and brands elevate their digital presence with custom-built websites and apps that convert users into loyal customers. My approach combines design precision, performance optimization, and a user-first mindset.
+            </p>
+            <p>
+                A self-taught programmer ranked among the top web developers in Osun State, Nigeria, I’m also an active tech content creator, mentor, and community contributor, passionate about empowering others through code.
+            </p>
+
+        </div>
+
+        <aside class="about-images">
+
+            <div class="photo-card">
+                <img src="jacksonbckg.jpg" alt="@jacksonwebdev" />
+                <p>@jacksonwebdev</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="jacksonJersey.jpg" alt="@jacksonbuildsWeb" />
+             <p>@jacksonbuildsWeb</p>
+            </div>
+
+        </aside>
+
+</section>
+
+
+
+ <!-- =================================================== FOOTER =================================================== -->
+
+    <section class="contact-wrapper" id="contact">
+
+      <!-- Contact Buttons & Info -->
+      <section class="contact-section">
+          <div class="profile-header">
+            <img src="jacksonbckg.jpg" alt="Profile Picture" class="profile-pic" style="width:60px; height:60px; border-radius:50%; object-fit:cover;" />
+            <h1>Let's work <br><span>together</span></h1>
+          </div>
+
+          <aside class="buttons">
+            <a href="mailto:oladapomarvel1@gmailcom" class="btn">Send us a mail <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="https://wa.link/src2uq" class="btn">WhatsApp Chat <i class="fa-solid fa-location-arrow"></i></a>
+          </aside>
+
+          <aside class="buttons">
+            <a href="tel:+2349155107544" class="btn">Call <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="contact.html" class="btn active">About<i class="fa-solid fa-location-arrow"></i></a>
+          </aside>
+
+          <footer>
+            <div class="socials">
+              <a href="https://www.facebook.com/share/16xsQuE8kG/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://x.com/jacksonwebdev?t=XTtHDIWyNLND4ebJQ34izg&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            
+          </footer>
+        </section>
+
+      <!-- Contact Form -->
+      <article class="contact2" id="contactHome">
+        <h2>CONTACT FORM</h2>
+        <div class="contact-form">
+          <label for="name">Name</label>
+          <input class="textArea" type="text" id="name" placeholder="Your Name or Company Name">
+
+          <label for="email">Email</label>
+          <input class="textArea" type="text" id="email" placeholder="Your company email or your email" oninput="validateEmail()">
+          <span id="email-error" style="color: rgb(184, 18, 18); font-size: 14px;"></span>
+
+          <label for="number">Telephone</label>
+          <input class="textArea" type="number" id="number" placeholder="Your Phone Number">
+
+          <label for="message">Message</label>
+          <textarea class="big-input" id="message" placeholder="What type of website do you want to build or any question you have..."></textarea>
+
+          <button class="submit-btn" onclick="sendEmail()">Send</button>
+        </div>
+      </article>
+
+    </section>
+
+  <p style="text-align: center;
+    color: var(--color-muted);
+    margin-bottom: 3em;">© 2025 JacksonWebDev. All rights reserved.</p>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

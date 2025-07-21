@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JacksonWebDev</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="jacksonJersey.jpg" href="jacksonJersey.jpg">
+  <link rel="stylesheet" href="style.css" />
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-left-a">
+      <div class="nav-left">JacksonWebDev</div>
+    </a>
+
+    <div class="nav-toggle" id="navToggle">
+      <!-- Hamburger Icon -->
+      <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="menu-svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+      </svg>
+    </div>
+
+    <div class="nav-center" id="navLinks">
+      <a href="index.html" class="top">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html"  class="active">Services</a>
+      <a href="Project.html">Project</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+
+    <div class="nav-right" id="navRight">
+      <a href="contact.html" class="btn-nav">Hire Me</a>
+    </div>
+  </nav>
+
+
+
+        <!-- =================================== END OF NAV ===================================== -->
+
+
+
+<style>
+    :root {
+      /* === COLORS === */
+      --color-bg: #0F1117;
+      --color-text: #FFFFFF;
+      --color-muted: #A0A0A0;
+      --color-accent: #00FFF5;
+      --color-accent-light: #1BFF8C;
+      --color-glass: rgba(15, 17, 23, 0.8);
+      --color-border: rgba(255, 255, 255, 0.1);
+      --color-shadow: rgba(0, 0, 0, 0.4);
+
+      /* === FONT FAMILIES === */
+      --font-primary: 'Inter', sans-serif;
+      --font-heading: 'Space Grotesk', sans-serif;
+
+      /* === BORDER RADIUS === */
+      --radius-lg: 20px;
+      --radius-full: 999px;
+
+      /* === SPACING === */
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 2rem;
+
+      /* === TRANSITION === */
+      --transition-fast: 0.3s ease;
+      --transition-med: 0.4s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      /* background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-primary); */
+      line-height: 1.6;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--space-lg);
+      padding: var(--space-lg);
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-box {
+      background-color: var(--color-glass);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 24px var(--color-shadow);
+      transition: transform var(--transition-med);
+    }
+
+    .service-box:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-number {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--color-muted);
+      margin-bottom: var(--space-md);
+    }
+
+    .service-box h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+
+    .service-box a {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      text-decoration: none;
+      color: var(--color-text);
+    }
+
+    .service-box img, .size-6 {
+      width: 1.8em;
+    }
+
+    .service-box p {
+      color: var(--color-muted);
+      font-size: 0.95rem;
+    }
+
+/* ================================================= FAQ Styling ========================================================= */
+
+    .faq-container {
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 0 1rem;
+    }
+
+    .faq-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--color-muted)
+    }
+
+    .faq-item {
+      background:  var(--color-glass);
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      border: 1px solid #3c3b3b;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem;
+      cursor: pointer;
+    }
+
+    .faq-question h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--color-text);
+    }
+
+    .faq-answer {
+      padding: 0 1.2rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+      font-size: 1rem;
+      color: var(--color-muted);
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 1.2rem 1rem;
+      max-height: 500px; /* large enough for longest content */
+      color: var(--color-muted);
+    }
+
+    .faq-item .icon i {
+      font-size: 1.2rem;
+      color: var(--color-muted);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .icon i {
+      transform: rotate(45deg);
+    }
+
+
+    @media (max-width: 1024px) {
+      .faq-title {
+        font-size: 1.3rem;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+    <section class="services-container">
+      
+        <div class="service-box">
+          <h2>Website Development</h2>
+          <p>Modern, responsive websites built to reflect your brand, engage visitors, and perform smoothly on every device, designed with clarity, function, and purpose.</p>
+          <a href="https://wa.link/fjaxgg">
+            <h3>Book a call
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+
+            </h3>
+          </a>
+        </div>
+        
+        <div class="service-box">
+          <h2>E-commerce solution</h2>
+          <p>Starting an online store or upgrading an existing one? No worries, we design e-commerce websites that make shopping easy and enjoyable for your customers. From simple navigation to secure checkout systems, we focus on helping you grow your sales and build customer loyalty.<p>
+          <a href="https://wa.link/src2uq">
+            <h3>Contact Us
+              <img src="telegramLogo-Photoroom.png" alt="contact-Icon">
+            </h3>
+          </a>
+        </div>
+        
+        <div class="service-box">
+          <h2>Website Revamp</h2>
+          <p>If your current site feels outdated or not converting, I’ll breathe new life into it with a modern design, improved functionality, and better user experience.</p>
+          <a href="https://wa.link/src2uq">
+            <h3>Book a call
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+            </h3>
+          </a>
+        </div>
+        
+        <div class="service-box">
+          <h2>SEO</h2>
+          <p>Having a great website is just the start, I optimize your site so it’s easily found on search engines, helping you attract the right visitors and grow organically.</p>
+          <a href="https://wa.link/src2uq">
+            <h3>Contact Us
+              <img src="telegramLogo-Photoroom.png" alt="contact-Icon">
+            </h3>
+          </a>
+        </div>
+
+    </section>
+
+
+  <!-- =================================== END OF SERVICES SECTION ===================================== -->
+
+
+
+
+
+
+
+  <!-- =================================== FAQ ===================================== -->
+
+    <section class="faq-container">
+
+        <h2 class="faq-title">What Our Clients Want to Know</h2>
+
+          <aside class="faq-item active">
+
+              <div class="faq-question">
+
+                <h3>How long does it take to develop a website?</h3>
+
+                <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+
+              <div class="faq-answer">
+                <p>The time it takes to create your website depends on its complexity and the features you want.
+                A basic website with a few pages and standard functionality can typically be completed within 1 to 3 weeks. 
+                If you need a more advanced site, such as an eCommerce platform, or one with custom development, t might take 6 to 12 weeks to ensure everything is properly designed, developed, tested, and optimized.</p>
+              </div>
+
+          </aside>
+
+          
+          <aside class="faq-item">
+              <div class="faq-question">
+
+                <h3>What are other services that you offer?</h3>
+
+                <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+
+              <div class="faq-answer">
+                <p>As Nigeria's number 1 Website Developer, we also offer other digital services: SEO, Graphics Design, Mobile App Development, Logo Design. e.t.c</p>
+              </div>
+          </aside>
+
+          <aside class="faq-item">
+              <div class="faq-question">
+
+                <h3>What is the pricing for your web development services?</h3>
+
+                <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+
+              <div class="faq-answer">
+                <p>Our pricing is project-based and depends on factors such as the site's complexity, number of pages, and required features. We offer affordable packages to ensure we work with your budget. We've also got discounts running all year long. Please check out our pricing page or contact us for a customized quote!</p>
+              </div>
+          </aside>
+
+          <aside class="faq-item">
+              <div class="faq-question">
+
+                <h3>What types of websites do you create?</h3>
+
+                <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+
+              <div class="faq-answer">
+                <p>We build all any type of websites, including Corporate, VTU, Real estate, Fintech, Educational, Classified, E-Commerce, Blogs, Investment, Banking, and many more. Whatever your needs are, we create websites that suits your requirements and taste.</p>
+              </div>
+          </aside>
+
+          <aside class="faq-item">
+              <div class="faq-question">
+
+                <h3>Do you provide post-launch maintenance?</h3>
+
+                <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+
+              <div class="faq-answer">
+                <p>After your website goes live, we offer a month of technical support and website maintenance at no extra cost. This ensures your site remains secure, updated, and optimized for performance. After the first month, you can also choose a maintenance plan that suits your needs to keep our support going.</p>
+              </div>
+          </aside>
+
+          <aside class="faq-item">
+              <div class="faq-question">
+
+                <h3>What do you need from me to get started?</h3>
+
+                <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              
+              <div class="faq-answer">
+                <p>To get started, we’ll need details about your business operations, content (text, images), and any design preferences you have. If you already have a domain and hosting, great! If not, we can assist you purchase them. Once we have these, we’ll begin the development process right away!</p>
+              </div>
+          </aside>
+
+  </section>
+
+
+
+  <!-- =================================================== FOOTER =================================================== -->
+
+    <section class="contact-wrapper" id="contact">
+
+      <!-- Contact Buttons & Info -->
+      <section class="contact-section">
+          <div class="profile-header">
+            <img src="jacksonbckg.jpg" alt="Profile Picture" class="profile-pic" style="width:60px; height:60px; border-radius:50%; object-fit:cover;" />
+            <h1>Let's work <br><span>together</span></h1>
+          </div>
+
+          <aside class="buttons">
+            <a href="mailto:oladapomarvel1@gmailcom" class="btn">Send us a mail <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="https://wa.link/src2uq" class="btn">WhatsApp Chat <i class="fa-solid fa-location-arrow"></i></a>
+          </aside>
+
+          <aside class="buttons">
+            <a href="tel:+2349155107544" class="btn">Call <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="contact.html" class="btn active">Service<i class="fa-solid fa-location-arrow"></i></a>
+          </aside>
+
+          <footer>
+            <div class="socials">
+              <a href="https://www.facebook.com/share/16xsQuE8kG/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://x.com/jacksonwebdev?t=XTtHDIWyNLND4ebJQ34izg&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            
+          </footer>
+        </section>
+
+      <!-- Contact Form -->
+      <article class="contact2" id="contactHome">
+        <h2>CONTACT FORM</h2>
+        <div class="contact-form">
+          <label for="name">Name</label>
+          <input class="textArea" type="text" id="name" placeholder="Your Name or Company Name">
+
+          <label for="email">Email</label>
+          <input class="textArea" type="text" id="email" placeholder="Your company email or your email" oninput="validateEmail()">
+          <span id="email-error" style="color: rgb(184, 18, 18); font-size: 14px;"></span>
+
+          <label for="number">Telephone</label>
+          <input class="textArea" type="number" id="number" placeholder="Your Phone Number">
+
+          <label for="message">Message</label>
+          <textarea class="big-input" id="message" placeholder="What type of website do you want to build or any question you have..."></textarea>
+
+          <button class="submit-btn" onclick="sendEmail()">Send</button>
+        </div>
+      </article>
+
+    </section>
+
+  <p style="text-align: center;
+    color: var(--color-muted);
+    margin-bottom: 3em;">© 2025 JacksonWebDev. All rights reserved.</p>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

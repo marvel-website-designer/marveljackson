@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How I Serve You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f6f6f6;
+      color: #222;
+    }
+
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .section-title p {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 0.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .action-buttons {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .action-buttons a {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-pink {
+      background: #e6007a;
+      color: #fff;
+    }
+
+    .btn-pink:hover {
+      background: #cc006a;
+    }
+
+    .btn-outline {
+      border: 2px solid #999;
+      color: #333;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: #ddd;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1.2rem;
+    }
+
+    .card-body h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.7rem;
+      font-weight: 700;
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .section-title h2 {
+        font-size: 1.5rem;
+      }
+
+      .card img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <section class="wrapper">
+
+        <div class="section-title">
+            <h2>How I Serve You</h2>
+            <p>
+                My design process is a clear, step-by-step approach that ensures your website is built with purpose, precision, and your goals in mind.
+            </p>
+        
+        </div>
+
+        <div class="action-buttons">
+            <a href="#" class="btn-pink">See All Projects <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="#" class="btn-outline">I Need A Website <i class="fa-solid fa-location-arrow"></i></a>
+        </div>
+
+        <aside class="card-grid">
+        <!-- Card 1 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/400x200?text=Discovery+Call" alt="Discovery Call" />
+                <div class="card-body">
+                    <h3>Discovery Call</h3>
+                    <p>We kick things off with a discovery call where I listen closely to your goals, business vision, and specific needs for the website...</p>
+                </div>
+
+        </aside>
+
+        <!-- Card 2 -->
+        <aside class="card">
+
+            <img src="https://via.placeholder.com/400x200?text=Project+Estimate" alt="Project Estimate" />
+            <div class="card-body">
+                <h3>Project Estimate</h3>
+                <p>Once I understand your requirements, I provide a project estimate that outlines the cost, timeline, and deliverables...</p>
+            </div>
+
+        </aside>
+
+        <!-- Card 3 -->
+        <aside class="card">
+
+            <img src="https://via.placeholder.com/400x200?text=Technical+Onboarding" alt="Technical Onboarding" />
+            <div class="card-body">
+                <h3>Technical Onboarding</h3>
+                <p>Before I dive into design and development, I go ahead to do the technical onboarding process. This involves setting up...</p>
+            </div>
+
+        </aside>
+
+            <!-- Add more cards below if needed -->
+        </div>
+    </section>
+
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</body>
+</html>

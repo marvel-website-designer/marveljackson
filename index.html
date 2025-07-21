@@ -1,621 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackson Portfolio</title>
-    <link rel="stylesheet" href="style2.css">
-    <link rel="icon" type="pro-marvel-pics3.png" href="pro-marvel-pics3.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <title>JacksonWebDev</title>
+  <link rel="icon" type="jacksonJersey.jpg" href="jacksonJersey.jpg">
+  <link rel="stylesheet" href="style.css" />
+
 <body>
 
-    <!-- =======================  HEADER ========================== -->
-    <header>
-      <div class="logo"><a href="#home">JACKSON</a></div>
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="nav-left-a">
+        <div class="nav-left">JacksonWebDev</div>
+      </a>
 
-        <nav id="navItem">
-            
-            <ul>
-                <li><a href="#home" id="active">HOME</a></li>
-                <li><a href="#services" >SERVICES</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#testimonial">TESTIMONIAL</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
+      <div class="nav-toggle" id="navToggle">
+        <!-- Hamburger Icon -->
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="menu-svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+        </svg>
+      </div>
 
-        </nav>
+      <div class="nav-center" id="navLinks">
+        <a href="about.html" class="top">About</a>
+        <a href="service.html">Services</a>
+        <a href="Project.html">Project</a>
+        <a href="contact.html">Contact Me</a>
+      </div>
 
-        
-
-    </header>
-
-
-    <main>
-
-        <section id="home">
-
-            <!-- =======================  SERVICES ========================== -->
-             <aside class="intro">
-
-                <div class="intro-text">
-                    <!-- <h1>FRONTEND<br>DEVELOPER</h1> -->
-                    <!-- <h1 class="container">
-                        Hi, I'm a <span id="text"></span><span class="cursor"></span>
-                    </h1>  
-     -->
-                    <p class="intro-p">I am Jackson <span class="highlight">Website Designer</span> with a passion for creating beautiful and responsive websites.</p>
-                    <a href="#portfolio"><button class="view-work-btn">VIEW MY WORK</button></a>
-                </div>
-
-                <div class="image">
-                    <img src="pro-marvel-pics3.png" alt=" MARVELOUS JACKSON">
-                    <div class="shadow"></div>
-                </div>
-
-             </aside>
-
-        </section>
+      <div class="nav-right" id="navRight">
+        <a href="#contact" class="btn-nav">Hire Me</a>
+      </div>
+    </nav>
 
 
-<!-- =======================  MY SERVICES ========================== -->
+
+        <!-- =================================== END OF NAV ===================================== -->
+
+
+
+
+    <section class="hero-container">
+
+      <aside class="hero-box">
+
+        <h1>Websites That Win Clients <br> & Build Your Brand</h1>
+        <p>I design modern, conversion-focused websites that help brands<br>
+        grow, connect, and stand out online.</p>
+        <div class="hero-buttons">
+
+          <a href="project.html" class="btn magenta">See All Projects</a>
+          <a href="https://wa.link/fjaxgg" class="btn Outline"
+          >Book A Call <i class="fa-solid fa-location-arrow"></i></a>
+
+        </div>
+
+      </aside>
+  </section>
+
+
+    <!-- =============================================== TOOLS I USE TECH STACK ===============================================  -->
  
-        <section>
+    <div class="tech-section">
 
-             <aside class="myservices" id="services">
+              <h2>Technologies We Used</h2>
 
-                <div class="services">
-                    <h1 class="service-h1">MY SERVICES</h1>
-    
-                    <section class="services-container">
 
-                        <div class="service">
+          <section class="scroll-container">
 
-                            <h2 class="services-h2"> <i class="fa-solid fa-laptop-code"></i> Web Development</h2>
-                            <p class="service-p">I create websites based on your ready-made. Whether it's a landing page or a business card website. I will make it look great and smoothly on any device</p>
-                        </div>
-                        <div class="service">
-                            
-                            <h2 class="services-h2"> <i class="fa-solid fa-pen-nib"></i>Web Design</h2>
-                            <p class="service-p">I can design your website from scratch.I create modern, simple, and user-friendly designs that match your bran and goals.</p>
-                        </div>
-                        <div class="service">
-                              
-                            <h2 class="services-h2"> <i class="fa-brands fa-wordpress"></i> Wordpress Development</h2>
-                            <p class="service-p">I build websites on WordPress, making them easy to update and manage. It's a great choice for blogs, small businesses, or portfolios.</p>
-                        </div>
+              <aside class="scroll-track">
 
-                    </section>
+                  <!-- Repeat icons twice for seamless loop -->
+                  
+                  <img src="skills/REACT-img-Photoroom.png" alt="React">
+
+                  <img src="skills/tailwind-Photoroom.png" alt="TailwindCSS">
+
+                  <img src="skills/FLUTTER-img-Photoroom.png" alt="Flutter">
+
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+
+                  <img src="skills/CSS-img-Photoroom.png" alt="CSS3">
+
+                  <img src="skills/JS-img-Photoroom.png" alt="JavaScript">
+
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                  
+                  <img src="skills/nextjs-Photoroom.png" alt="NextJS">
+
+                  <img src="skills/Typescript-Photoroom.png" alt="Typescript">
+
+                  <img src="skills/wordpres-Photoroom.png" alt="WordpresS">
+
+                  <img src="skills/GIT-img-Photoroom.png" alt="GIT">
+
+
+                  <!-- Duplicate icons for continuous loop -->
+
+                  <img src="skills/REACT-img-Photoroom.png" alt="React">
+
+                  <img src="skills/tailwind-Photoroom.png" alt="TailwindCSS">
+
+                  <img src="skills/FLUTTER-img-Photoroom.png" alt="Flutter">
+
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+
+                  <img src="skills/CSS-img-Photoroom.png" alt="CSS3">
+
+                  <img src="skills/JS-img-Photoroom.png" alt="JavaScript">
+
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                  
+                  <img src="skills/nextjs-Photoroom.png" alt="NextJS">
+
+                  <img src="skills/Typescript-Photoroom.png" alt="Typescript">
+
+                  <img src="skills/wordpres-Photoroom.png" alt="WordpresS">
+
+                  <img src="skills/GIT-img-Photoroom.png" alt="GIT">
+                  
+              </aside>
+
+          </section>
+    </div>
+<!-- =============================================== END OF TOOLS I USE TECH STACK ===============================================  -->
+
+
+
+    <!-- =============================================== HOW I WILL SERVE YOU ===============================================  -->
+
+    <section class="wrapper">
+
+        <aside class="section-title">
+            <h2>How I Serve You</h2>
+            <p>
+               My design process is a clear, step-by-step approach focused on purpose, precision, and your goals. From discovery to launch, I prioritize strategy, user experience, and visual consistency. <br> <br> Every decision aligns with your brand and audience, blending creativity with clean, functional design. With transparent communication and high-quality code, I ensure a professional, results-driven experience.
+
+
+            </p>
+        
+        </aside>
+
+        <aside class="action-buttons">
+
+            <a href="project.html" class="btn-pink">See All Projects <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="https://wa.link/src2uq" class="btn-outline">I Need A Website <i class="fa-solid fa-location-arrow"></i></a>
+            
+        </aside>
+
+
+          <section class="card-grid">
+
+            <!-- Card 1 -->
+                <aside class="card">
+                    <video autoplay muted loop>
+                        <source src="discoveryCall-Hecks.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="card-body">
+                        <h3>Discovery Call</h3>
+                        <p>We kick things off with a discovery call where I listen closely to your goals, business vision, and specific needs for the website. This is where I gather all the essential details, answer your questions, discuss possible features, functionality, and design preferences, and ensure we are aligned with your vision.</p>
+                    </div>
+
+                </aside>
+
+            <!-- Card 2 -->
+            <aside class="card">
+
+                    <video autoplay muted loop>
+                        <source src="projectEstimate-Hecks.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                <div class="card-body">
+                    <h3>Project Estimate</h3>
+                    <p>Once I understand your requirements, I provide a project estimate that outlines the cost, timeline, and deliverables for the website. This detailed estimate ensures that there are no flaws down the line and that we are working within the set budget and expectations from the very beginning.</p>
                 </div>
 
-             </aside>
+            </aside>
+
+            <!-- Card 3 -->
+            <aside class="card">
+
+                    <video autoplay muted loop>
+                        <source src="websiteSecurity-Hecks.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                <div class="card-body">
+                    <h3>Website Security & Backups</h3>
+                    <p>I prioritize your website’s security with robust protection, regular updates, and threat prevention. Automated backups ensure your data is safe and easily restorable in case of hacks, errors, or failures—minimizing downtime and protecting your online presence.</p>
+                </div>
+
+            </aside>
+
+            <!-- Card 4 -->
+            <aside class="card">
+
+                    <video autoplay muted loop>
+                        <source src="responsiveHecks.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                <div class="card-body">
+                    <h3>Responsive Design Phase</h3>
+                      <p>Here is where I focus on responsive design, ensuring that your website looks fantastic and optimized on all devices—whether it’s a desktop, tablet, or smartphone. This phase ensures that your visitors have a seamless and enjoyable experience across all viewpoint.</p>
+                </div>
+
+            </aside>
+
 
         </section>
 
-       <!-- ====================== SKILLS =========================== -->
-     <!-- ====================== PROGRAMMING LANGUAGE =========================== -->
 
-     <section class="skills-header" id="skills">
-        <aside class="skills">
-            <h1 class="skills-h1">
-                My Programming Languages and Tools
-            </h1>
-
-            <article class="skills-container">
-                <div class="skill">
-                    <img src="JS-img-Photoroom.png" alt="JavaScript">
-                    <h3>JavaScript</h3>
-                </div>
-
-                <div class="skill">
-                    <img src="FIGMA-img-Photoroom.png" alt="Figma">
-                    <h3>Figma</h3>
-                </div>
-
-                <div class="skill">
-                    <img src="wordpres-Photoroom.png" alt="WordPress">
-                    <h3>WordPress</h3>
-                </div>
-
-                <div class="skill">
-                    <img src="FLUTTER-img-Photoroom.png" alt="Flutter">
-                    <h3>Flutter</h3>
-                </div>
-
-                <div class="skill">
-                    <img src="REACT-img-Photoroom.png" alt="React">
-                    <h3>React</h3>
-                </div>
-                
-                <div class="skill">
-                    <img src="HTML-img-Photoroom.png" alt="HTML">
-                    <h3>HTML</h3>
-                </div>
-
-                <div class="skill">
-                    <img src="CSS-img-Photoroom.png" alt="CSS">
-                    <h3>CSS</h3>
-                </div>
-                <div class="skill">
-                    <img src="tailwind-Photoroom.png" alt="Flutter">
-                    <h3>Tailwind</h3>
-                </div>
-
-                <div class="skill">
-                    <img src="nextjs-Photoroom.png" alt="React">
-                    <h3>NextJS</h3>
-                </div>
-
-                <div class="skill">
-                    <img src="nodejs-Photoroom.png" alt="HTML">
-                    <h3>NodeJs</h3>
-                </div>
-
-                <div class="skill">
-                    <img src="python-Photoroom.png" alt="CSS">
-                    <h3>Python</h3>
-                </div>
-
-            </article>
-        </aside>
     </section>
 
 
-         <!-- ====================== PORTFOLIO =========================== -->
+    <!-- =============================================== END OF HOW I WILL SERVE YOU ===============================================  -->
 
-         <section id="portfolio">
-            <aside class="portfolio-header">
-                <h1>PORTFOLIO</h1>
-
-                <aside class="portfolio-container">
-
-                    <article class="portfolio">
-                        <a href="http://kingkamventures.com">
-                            <div class="portfolio-image">
-                                <img src="kingkamVentureRealcrop.jpg" alt="Portfolio-1">
-                            </div>
-                        </a>
-                        <div class="portfolio-text">
-                            <h2>Real Estate Agency</h2>
-                            <p>2025.</p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                         <a href="https://oe-commerce-store.netlify.app/" target="_blank"><img src="oeCrop.jpg" alt="Portfolio-2"></a>
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>E-Commerce Website</h2>
-                            <p>2023.</p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                            <a href="https://nftswallet.netlify.app/" target="_blank"><img src="nft'sCrop.jpg" alt="Portfolio-3"></a>
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>NFT's Website</h2>
-                            <p>2024</p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                            <img src="jobaRealCrop.jpg" alt="Portfolio-4">
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>Real Estate Website</h2>
-                            <p>2022.</p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                         <a href="https://mini-cinema.netlify.app/" target="_blank"><img src="movieweb.png" alt="Portfolio-2"></a>
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>Movie Website</h2>
-                            <p>2024</p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                            <a href="https://vlogweb.netlify.app/" target="_blank"><img src="Blogweb.png" alt="Portfolio-3"></a>
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>Blog Web Website</h2>
-                            <p>2024.</p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                            <a href="https://fast-tracking-logistics.netlify.app" target="_blank"><img src="Fast Track Logistics .png" alt="Portfolio-3"></a>
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>Logistics Website <br> (for shipping all across the world🌍)</h2>
-                            <p>2025</p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                           <img src="Crypto Landing Page.png" alt="Portfolio-4">
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>Crypto Landing Page</h2>
-                            <p>2024</p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                            <a href="https://e-commerce-artist.netlify.app/" target="_blank"><img src="dessert.png" alt="Portfolio-5"></a>
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>E-commerce Website</h2>
-                            <p>2025</p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                            <a href="https://admin8dashboard.netlify.app/" target="_blank"><img src="Dashboard.png" alt="Portfolio-6"></a>
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>Responsive Dashboard Website</h2>
-                            <p>2023</p>
-                        </div>
-                    </article>
-                    
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                            <img src="evidence4.png" alt="Portfolio-7">
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>Cat Blog Design</h2>
-                            <p>(FIGMA).</p>
-                        </div>
-                    </article>
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                           <img src="evidence2.png" alt="Portfolio-8">
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>Purchase Web Design</h2>
-                            <p>(FIGMA).</p>
-                        </div>
-                    </article>
-                    <article class="portfolio">
-                        <div class="portfolio-image">
-                            <img src="evidence5.png" alt="Portfolio-9">
-                        </div>
-                        <div class="portfolio-text">
-                            <h2>Crypto Landing Design</h2>
-                            <p>(FIGMA).</p>
-                        </div>
-                    </article>
-
-                    
-                </aside>
-            </aside>
-         </section>
+ 
 
 
 
-         <!-- ========================= TESTIONIAL SECTION  ====================== -->
 
 
-    <section>
+   <!-- =================================================== FOOTER =================================================== -->
 
-        <article class="testimonial-section" id="testimonial">
+    <section class="contact-wrapper" id="contact">
 
-            <aside class="testimonial-description">
+      <!-- Contact Buttons & Info -->
+      <section class="contact-section">
+          <div class="profile-header">
+            <img src="jacksonbckg.jpg" alt="Profile Picture" class="profile-pic" style="width:60px; height:60px; border-radius:50%; object-fit:cover;" />
+            <h1>Let's work <br><span>together</span></h1>
+          </div>
 
-                <h1>Client <span>Testimonials</span></h1>
-                <img class="underlineIMG" src="separater.png" alt="underlineIMG">
+          <aside class="buttons">
+            <a href="mailto:oladapomarvel1@gmailcom" class="btn">Send us a mail <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="https://wa.link/src2uq" class="btn">WhatsApp Chat <i class="fa-solid fa-location-arrow"></i></a>
+          </aside>
 
-            </aside>
+          <aside class="buttons">
+            <a href="tel:+2349155107544" class="btn">Call <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="contact.html" class="btn active">Home<i class="fa-solid fa-location-arrow"></i></a>
+          </aside>
+
+          <footer>
+            <div class="socials">
+              <a href="https://www.facebook.com/share/16xsQuE8kG/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://x.com/jacksonwebdev?t=XTtHDIWyNLND4ebJQ34izg&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
             
-            <section class="testimonial-container" id="testimonialSlider">
+          </footer>
+        </section>
 
-                <aside class="testimonial-contain">
+      <!-- Contact Form -->
+      <article class="contact2" id="contactHome">
+        <h2>CONTACT FORM</h2>
+        <div class="contact-form">
+          <label for="name">Name</label>
+          <input class="textArea" type="text" id="name" placeholder="Your Name or Company Name">
 
-            
-                    <section class="testimonial-speech">
-                        <i class="fa-solid fa-quote-left"></i>
-    
-                        <p>Working with Jackson Website development TEAM was a game-changer for our business. They built a sleek, professional website that showcases our construction projects beautifully. The site is fast, easy to navigate, and has already brought in new clients. Highly recommend!</p>
-    
-                    </section>
-    
-                    <section class="testimonial-profile">
-                        
-                        <div class="profile-img">
-                            <img src="avatar1.jpg" alt="TestifyIMG">
-                        </div>
-                            
-                        <div class="profile-text">
-    
-                            <h3>Mark Anderson</h3>
-    
-                        </div>
-                            
-    
-                    </section>
-                     
-                   
-                    
-                </aside>
-    
+          <label for="email">Email</label>
+          <input class="textArea" type="text" id="email" placeholder="Your company email or your email" oninput="validateEmail()">
+          <span id="email-error" style="color: rgb(184, 18, 18); font-size: 14px;"></span>
 
-                <aside class="testimonial-contain">
+          <label for="number">Telephone</label>
+          <input class="textArea" type="number" id="number" placeholder="Your Phone Number">
 
-            
-                    <section class="testimonial-speech">
-                        <i class="fa-solid fa-quote-left"></i>
-    
-                        <p>I needed a website that not only looked great but also helped me attract customers. [Your Name] delivered exactly that! They understood my vision, optimized the site for SEO, and made it super user-friendly. Fantastic work!</p>
-    
-                    </section>
-    
-                    <section class="testimonial-profile">
-                        
-                        <div class="profile-img">
-                            <img src="avatar2.jpg" alt="TestifyIMG">
-                        </div>
-                            
-                        <div class="profile-text">
-    
-                            <h3>Thompson Friction</h3>
-    
-                        </div>
-                            
-    
-                    </section>
+          <label for="message">Message</label>
+          <textarea class="big-input" id="message" placeholder="What type of website do you want to build or any question you have..."></textarea>
 
-                   
-                    
-                </aside>
-    
+          <button class="submit-btn" onclick="sendEmail()">Send</button>
+        </div>
+      </article>
 
-                <aside class="testimonial-contain">
+    </section>
 
-            
-                    <section class="testimonial-speech">
-                        <i class="fa-solid fa-quote-left"></i>
-    
-                        <p>Jackson Team developed a powerful e-commerce site for my business, complete with an easy-to-use admin dashboard. Uploading products, managing inventory, and processing orders has never been easier. Sales have increased, and I couldn't be happier!<p>
-    
-                    </section>
-    
-                    <section class="testimonial-profile">
-                        
-                        <div class="profile-img">
-                            <img src="avatar3.jpg" alt="TestifyIMG">
-                        </div>
-                            
-                        <div class="profile-text">
-    
-                            <h3>Kristie Hans</h3>
-    
-                        </div>
-                            
-    
-                    </section>
-                     
-                   
-                    
-                </aside>
-    
-
-                <aside class="testimonial-contain">
-
-            
-                    <section class="testimonial-speech">
-                        <i class="fa-solid fa-quote-left"></i>
-    
-                        <p>
-                            Our website needed a professional touch, and Jackson Website development TEAM exceeded expectations. They designedy site that highlights our properties perfectly. The entire process was smooth, and the results speak for themselves!
-                        </p>
-    
-                    </section> 
-    
-                    <section class="testimonial-profile">
-                        
-                        <div class="profile-img">
-                            <img src="avatar4.jpg" alt="TestifyIMG">
-                        </div>
-                            
-                        <div class="profile-text">
-    
-                            <h3>Olaoluwa Asabi</h3>
-    
-                        </div>
-                            
-    
-                    </section>
-                </aside>   
-                
-                
-                <aside class="testimonial-contain">
-
-            
-                    <section class="testimonial-speech">
-                        <i class="fa-solid fa-quote-left"></i>
-    
-                        <p>
-                            Jackson Website designer TEAM built us a website that not only looks amazing but also helps us generate leads. The contact forms and service pages are perfectly optimized, and we've seen a noticeable increase in inquiries. Highly professional and easy to work with!
-                        </p>
-    
-                    </section>
-    
-                    <section class="testimonial-profile">
-                        
-                        <div class="profile-img">
-                            <img src="avatar5.jpg" alt="TestifyIMG">
-                        </div>
-                            
-                        <div class="profile-text">
-    
-                            <h3>Olamide Emmanuel</h3>
-    
-                        </div>
-                            
-    
-                    </section>
-                </aside>   
+  <p style="text-align: center;
+    color: var(--color-muted);
+    margin-bottom: 3em;">© 2025 JacksonWebDev. All rights reserved.</p>
 
 
-                <aside class="testimonial-contain">
+  <script src="script.js"></script>       
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-            
-                    <section class="testimonial-speech">
-                        <i class="fa-solid fa-quote-left"></i>
-    
-                        <p>
-                            We needed a website that showcased our renovation work and helped us stand out. Jackson Website Designer Team created a stunning easy-to-navigate site that has improved our credibility and brought in more clients. Couldn't be happier!
-                        </p>
-    
-                    </section>
-    
-                    <section class="testimonial-profile">
-                        
-                        <div class="profile-img">
-                            <img src="avatar6.jpg" alt="TestifyIMG">
-                        </div>
-                            
-                        <div class="profile-text">
-    
-                            <h3>Bruno Johnson</h3>
-    
-                        </div>
-                            
-    
-                    </section>
-
-                </aside>   
-
-
-                <aside class="testimonial-contain">
-
-            
-                    <section class="testimonial-speech">
-                        <i class="fa-solid fa-quote-left"></i>
-    
-                        <p>
-                            Thanks to Jackson Website Designer Team, we now have an online presence that reflects the quality of our products. The e-commerce functionality is smooth, and our customers love how easy it is to browse and order. A fantastic investment for our business!
-                        </p>
-    
-                    </section>
-    
-                    <section class="testimonial-profile">
-                        
-                        <div class="profile-img">
-                            <img src="avatar3ii.jpg" alt="TestifyIMG">
-                        </div>
-                            
-                        <div class="profile-text">
-    
-                            <h3>MRS. L M Garrington</h3>
-    
-                        </div>
-                            
-    
-                    </section>
-                     
-                   
-                    
-                </aside>
-    
-
-            </section>
-
-
-
-
-
-        <footer id="contact">
-
-
-                <aside class="footter">
-
-                    <article class="contact1">
-                        <h1>DO YOU HAVE A PROJECT TO DISCUSS</h1>
-                        <h2>GET IN TOUCH <i class="fa-solid fa-message"></i></h2>
-
-                        <aside class="contact-handles">
-                            <div>
-                                <h3>CONTACT</h3>
-                                <p>oladapomarvel1@gmail.com</p>
-                            </div>
-    
-                            <div>
-                                <h3>SOCIAL MEDIA</h3>
-                                <p class="media-icons">
-                                    <a href="https://x.com/web9development?t=Z0vIgnC0kuXEihWBfdcWlw&s=09"><i class="fa-brands fa-twitter"></i></a>
-
-                                    <a href="https://www.instagram.com/front2back_website_designer?igsh=MThiOXFydXhsOHFicw=="><i class="fa-brands fa-instagram"></i></a>
-
-                                    <a href="https://www.tiktok.com/@frontdevelopment?_t=ZM-8uozq3BjGM9&_r=1"><i class="fa-brands fa-tiktok"></i></a>
-
-                                    <a href="https://wa.link/dukhee"><i class="fa-brands fa-whatsapp"></i></a>
-                                    
-                                    <a href="https://t.me/jackson_0_7"><i class="fa-brands fa-telegram"></i></a>
-                                </p>
-                            </div> 
-
-                    </article>
-
-                    <article class="contact2">
-
-                        <h2>CONTACT FORM</h2>
-    
-                        
-                                        <!-- Contact Form -->
-                        <div class="contact-form">
-                            <label for="name">Name</label> <br><br>
-                            <input class="textArea" type="text" id="name" placeholder="Your Name or company Name"> <br>
-    
-                            <label for="email">Email</label> <br><br>
-                            <input class="textArea" type="text" id="email" placeholder="Your company email or Your email" oninput="validateEmail()"> <br>
-                            <span id="email-error" style="color: rgb(184, 18, 18); font-size: 14px;"></span> <!-- Error Message Display --> <br>
-    
-                            <label for="number">Telphone</label> <br><br>
-                            <input class="textArea" type="number" id="number" placeholder="Your Phone Number"> <br><br>
-    
-                           
-                            <label for="message">Message</label> <br><br>
-                            <textarea class="big-input" id="message" placeholder="What question do you have or what kind type to website do you want to build..."></textarea> <br><br>
-    
-                            <button class="submit-btn" onclick="sendEmail()">SEND</button>
-                        </div>
-    
-    
-                    </article>
-    
-    
-                    
-                </aside>
-    
-                <div class="footer-copyright">
-                    <small>&copy; 2025-All rights reserved, web design and development - Marvelous Website Designer Team</small>
-                </div>
-    
-            </footer>
-    
-
-    </main>
-
-
-    <script src="hopescript.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
 
 </body>
 </html>

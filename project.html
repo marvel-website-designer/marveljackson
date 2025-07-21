@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JacksonWebDev</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="jacksonJersey.jpg" href="jacksonJersey.jpg">
+  <link rel="stylesheet" href="style.css" />
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-left-a">
+      <div class="nav-left">JacksonWebDev</div>
+    </a>
+
+    <div class="nav-toggle" id="navToggle">
+      <!-- Hamburger Icon -->
+      <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="menu-svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+      </svg>
+    </div>
+
+    <div class="nav-center" id="navLinks">
+      <a href="index.html" class="top">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="Project.html" class="active">Project</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+
+    <div class="nav-right" id="navRight">
+      <a href="contact.html" class="btn-nav">Hire Me</a>
+    </div>
+  </nav>
+
+
+
+        <!-- =================================== PROJECT INCOMNG ===================================== -->
+
+
+  <style>
+    .recent-designs {
+      text-align: center;
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    .recent-designs h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      /* font-family: 'Space Grotesk', sans-serif; */
+      font-family: "Winky Rough", sans-serif;
+    }
+
+    .recent-designs p {
+      font-size: 1.1rem;
+      color: #cfcfcf;
+      margin-bottom: 40px;
+      
+    }
+
+    .projects-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #111;
+      border: 1px solid #ccc;
+      /* border-radius: 20px; */
+      width: 320px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      /* padding: 8px; */
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+      height: 350px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      display: block;
+      border-bottom: 1px solid #222;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+    }
+
+    .project-info {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .project-info h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      /* margin-bottom: 5px; */
+    }
+
+    .project-info p {
+      font-size: 1rem;
+      color: #ddd;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .flag {
+      width: 20px;
+      height: auto;
+      border-radius: 3px;
+    }
+
+    .visit-btn {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 10px 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .visit-btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .visit-btn i {
+      margin-left: 10px;
+    }
+
+    @media (max-width: 1024px) {
+
+        .projects-container {
+        justify-content: center;
+      }
+
+      .project-card {
+        width: 45%;
+      }
+
+    }
+    @media (max-width: 768px) {
+      .projects-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project-card {
+        width: 100%;
+      }
+      .recent-designs h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .recent-designs p {
+        font-size: .9rem;
+        margin-bottom: 15px;
+      }
+    }
+    /* .activeService {
+      color: #00FFF5;
+    } */
+    
+
+  </style>
+
+<section class="recent-designs">
+
+    <h2>
+      <span class="activeService">Our Recent Designs</span>
+    </h2>
+    <p>Here are some series of our most recent projects <br> from 2025. New projects are added every month.</p>
+
+    <div class="projects-container">
+
+      <!-- Project Card 1 -->
+      <aside class="project-card">
+        <img src="project/kingkamVentureRealcrop.jpg" alt="Law Firm Website Screenshot">
+        <div class="project-info">
+          <h3>King KamVentures</h3>
+          <p>Real Estate</p>
+          <a href="https://kingkamventures.com/" class="visit-btn">VISIT WEBSITE <i class="fa-solid fa-location-arrow"></i></a>
+        </div>
+      </aside>
+
+      <!-- Project Card 2 -->
+      <aside class="project-card">
+        <img src="project/nft'sCrop.jpg" alt="Solar Website Screenshot">
+        <div class="project-info">
+          <h3>NFT's</h3>
+          <p>Crypto Space</p>
+          <a href="https://nftswallet.netlify.app/" class="visit-btn">VISIT WEBSITE <i class="fa-solid fa-location-arrow"></i></a>
+        </div>
+      </aside>
+
+      <!-- Project Card 3 -->
+      <aside class="project-card">
+        <img src="project/ecommerceLandCrop.jpg" alt="Oil and Gas Website Screenshot">
+        <div class="project-info">
+          <h3>Glowing SkinCare Store</h3>
+          <p>Ecommerce Website</p>
+          <a href="https://oe-commerce-store.netlify.app/" class="visit-btn">VISIT WEBSITE <i class="fa-solid fa-location-arrow"></i></a>
+        </div>
+      </aside>
+
+      <!-- Project Card 4 -->
+      <aside class="project-card">
+        <img src="project/movieWebCropORI.jpg" alt="Movie Fix">
+        <div class="project-info">
+          <h3>G2G Cinema</h3>
+          <p>Movie Site</p>
+          <a href="https://mini-cinema.netlify.app/" class="visit-btn">VISIT WEBSITE <i class="fa-solid fa-location-arrow"></i></a>
+        </div>
+      </aside>
+
+      <!-- Project Card 5 -->
+      <aside class="project-card">
+        <img src="project/JacksonWebDev LANDING PAGE CROP.jpg" alt="">
+        <div class="project-info">
+          <h3>JacksonWebDev</h3>
+          <p>Portfoio Website</p>
+          <a href="https://jacksonwebdev.netlify.app/" class="visit-btn">VISIT WEBSITE <i class="fa-solid fa-location-arrow"></i></a>
+        </div>
+      </aside>
+
+      <!-- Project Card 6 -->
+      <aside class="project-card">
+        <img src="project/vlogLandCrop.jpg" alt="Oil and Gas Website Screenshot">
+        <div class="project-info">
+          <h3>WildLife</h3>
+          <p>Blog Website</p>
+          <a href="https://vlogweb.netlify.app/" class="visit-btn">VISIT WEBSITE <i class="fa-solid fa-location-arrow"></i></a>
+        </div>
+      </aside>
+
+      <!-- Project Card 7 -->
+      <aside class="project-card">
+        <img src="project/dashboardCrop.jpg" alt="Movie Fix">
+        <div class="project-info">
+          <h3>Sales DashBoard</h3>
+          <p>Dashboard</p>
+          <a href="http://admin8dashboard.netlify.app/" class="visit-btn">VISIT WEBSITE <i class="fa-solid fa-location-arrow"></i></a>
+        </div>
+      </aside>
+
+      <!-- Project Card 8 -->
+      <aside class="project-card">
+        <img src="project/dessert-ecommerce.jpg" alt="Ecommerce Website">
+        <div class="project-info">
+          <h3>Artist FreeStyle store</h3>
+          <p>Ecomerce Web store</p>
+          <a href="https://e-commerce-artist.netlify.app/" class="visit-btn">VISIT WEBSITE <i class="fa-solid fa-location-arrow"></i></a>
+        </div>
+      </aside>
+
+
+  </div>
+
+</section>
+
+
+        <!-- =================================== END OF NAV ===================================== -->
+
+
+
+
+      <!-- =================================================== FOOTER =================================================== -->
+
+    <section class="contact-wrapper" id="contact">
+
+      <!-- Contact Buttons & Info -->
+      <section class="contact-section">
+          <div class="profile-header">
+            <img src="jacksonbckg.jpg" alt="Profile Picture" class="profile-pic" style="width:60px; height:60px; border-radius:50%; object-fit:cover;"/>
+            <h1>Let's work <br><span>together</span></h1>
+          </div>
+
+          <aside class="buttons">
+            <a href="mailto:oladapomarvel1@gmailcom" class="btn">Send us a mail <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="https://wa.link/src2uq" class="btn">WhatsApp Chat <i class="fa-solid fa-location-arrow"></i></a>
+          </aside>
+
+          <aside class="buttons">
+            <a href="tel:+2349155107544" class="btn">Call <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="project.html" class="btn active">Project<i class="fa-solid fa-location-arrow"></i></a>
+          </aside>
+
+          <footer>
+            <div class="socials">
+              <a href="https://www.facebook.com/share/16xsQuE8kG/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://x.com/jacksonwebdev?t=XTtHDIWyNLND4ebJQ34izg&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            
+          </footer>
+        </section>
+
+      <!-- Contact Form -->
+      <article class="contact2" id="contactHome">
+        <h2>CONTACT FORM</h2>
+        <div class="contact-form">
+          <label for="name">Name</label>
+          <input class="textArea" type="text" id="name" placeholder="Your Name or Company Name">
+
+          <label for="email">Email</label>
+          <input class="textArea" type="text" id="email" placeholder="Your company email or your email" oninput="validateEmail()">
+          <span id="email-error" style="color: rgb(184, 18, 18); font-size: 14px;"></span>
+
+          <label for="number">Telephone</label>
+          <input class="textArea" type="number" id="number" placeholder="Your Phone Number">
+
+          <label for="message">Message</label>
+          <textarea class="big-input" id="message" placeholder="What type of website do you want to build or any question you have..."></textarea>
+
+          <button class="submit-btn" onclick="sendEmail()">Send</button>
+        </div>
+      </article>
+
+    </section>
+
+  <p style="text-align: center;
+    color: var(--color-muted);
+    margin-bottom: 3em;">© 2025 JacksonWebDev. All rights reserved.</p>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
